@@ -36,6 +36,7 @@ body {
 	margin-top: 20vh;
 	font-size: 4em;
 	font-weight: bold;
+	color: white;
 }
 
 .logo-image {
@@ -44,7 +45,7 @@ body {
 
 .logo-banner, 
 .logo-credit {
-	background-color:  rgba(255, 255, 255, 0.7);
+	background-color:  rgba(0, 0, 0, 0.2);
 }
 
 .logo-credit {
@@ -57,40 +58,45 @@ body {
 .right-side {
 	width: 60vw;
 	height: 100vh;
-	background-color: #9CA6B0;
+	background-color: rgba(149, 162, 208, 0.5);
 	display: flex;
 	flex-direction: column;
 	align-items: stretch; 
-	justify-content: stretch;
+	justify-content: flex-start;
 }
 
 .intro {
+	/* display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start; */
 	height: 35vh;
-	/* padding: 10%; */
-	padding-bottom: 0;
+	width: 80%;
+	/* padding-bottom: 0; */
 	font-size: large;
-	font-weight: 500;
+	font-weight: 700;
+	font-size: 20px;
 }
 
-.intro p {
-	margin: 10%;
-	font-size: 20px;
+.intro-text {
+	padding: 10% 5%;
 }
 
 .form {
 	/* padding: 10%; */
 	/* display: flex; */
-	flex-direction: column;
-  /* justify-content: flex-start; */
-	align-items: flex-start;
+	/* flex-direction: column; */
+    /* justify-content: stretch; */
+	/* align-items: stretch; */
 	/* height: 35vh; */
-	background-color: white;
-	box-shadow: 10px, 10px, black;
+	background-color: #ffffffc5;
+	box-shadow: 3px 3px 3px 3px #00000030;
 }
 
 .form p {
 	font-size: 24px;
 	font-weight: 600;
+	padding-left: 5%;
 	/* margin: 10%; */
 	/* margin-bottom: 0; */
 }
@@ -121,19 +127,22 @@ form {
 	/* padding: 10%; */
 	/* height: 30vh; */
 	/* display: flex; */
-	flex-direction: column;
+	/* flex-direction: column;
 	align-items: flex-start;
+	justify-content: flex-start; */
 }
 
 .foot-content {
-	margin: 10%;
+	padding: 5%;
 }
 
 button {
 	background-color: rgb(113, 171, 219);
 	color: white;
 	font-weight: 800;
-	border-radius: 4px;
+	font-size: 16px;
+	border-radius: 8px;
 	border: none;
-	padding: .5em 1em;
+	padding: 1em 3em;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
