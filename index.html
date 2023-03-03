@@ -7,6 +7,20 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Sign-up Form</title>
 </head>
+<script>
+	function validate_password() {
+		var password = document.getElementById('password').value;
+		var password_confirmation = document.getElementById('password-confirmation').value;
+		if (password == '')
+			alert ("Please enter password")
+		else if (password_confirmation == '')
+			alert ("Please enter password confirmation")
+		else if (password != password_confirmation) {
+			document.getElementById('passwords').innerHTML += "<p> * Passwords do not match </p>";
+			alert ("Passwords do not match")
+		}
+	}
+</script>
 <body>
 	<div class="left-side">
 		<div class="logo-banner">
@@ -26,9 +40,9 @@
 				<p>What are <i>you</i> waiting for?</p>
 			</div>
 		</div>
-		<div class="form">
+		<div class="form" id="form">
 			<form>
-				<p>Sign Up Here!</p>
+				<p class="form-intro">Sign Up Here!</p>
 					<div class="form-row">
 						<div class="form-field">
 							<label for="first-name">FIRST NAME</label>
@@ -49,24 +63,26 @@
 							<input type="tel" name="tel" id="tel">
 						</div>
 					</div>
-					<div class="form-row">
+					<div class="form-row" id="passwords">
 						<div class="form-field">
 							<label for="password">PASSWORD</label>
 							<input type="password" name="password" id="password" required>
 						</div>
 						<div class="form-field">
 							<label for="password-confirmation">CONFIRM PASSWORD</label>
-							<input type="password" name="password-confirmation" id="password-confirmation" required>
+							<input type="password" name="password-confirmation" id="password-confirmation" required oninput="validate_password(this)">
 						</div>
 					</div>
+					<p class="error_msg" id="error_msg"></p>
 				</div>
 				<div class="foot">
 					<div class="foot-content">
-						<button type="submit">Create Account</button>
+						<button type="submit" id="submitbtn">Create Account</button>
 						<p>Already have an account? <a href>Log in</href></p>
 					</div>
 				</div>
 		</form>
 	</div>
+	<script src="script.js"></script>
 </body>
 </html>
